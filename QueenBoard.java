@@ -10,10 +10,7 @@ public class QueenBoard{
 
   //Private methods (suggested):
     private boolean addQueen(int r, int c){
-      if(!isThreatened){
-        board[r][c] = -1;
-        return true
-      }
+
 
       return false;
     }
@@ -28,7 +25,7 @@ public class QueenBoard{
     }
 
     private boolean isThreatened(){
-      
+
     }
 
   //Public Methods:
