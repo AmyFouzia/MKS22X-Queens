@@ -27,6 +27,10 @@ public class QueenBoard{
       return false;
     }
 
+    private boolean isThreatened(){
+      
+    }
+
   //Public Methods:
     /**
     *return The output string formatted as follows:
@@ -44,7 +48,9 @@ public class QueenBoard{
     */
 
     public String toString(){
-
+      String res = "";
+      for(int i = 0)
+        for(int j = 0)
     }
 
     /**
