@@ -6,17 +6,25 @@ public class QueenBoard{
   //Constructor:
     public QueenBoard(int size){
       board = new int[size][size];
+      for(int row = 0; row <= size; row++){
+        for(int col = 0; col <= size; col++){
+          board[row][col] = 0;
+        }
+      }
     }
 
   //Private methods (suggested):
     private boolean addQueen(int r, int c){
+      board[r][c] = 0
 
+      for(){
 
-      return false;
+      }
+
+      return true;
     }
 
     private boolean removeQueen(int r, int c){
-      if(board[r][c] == -1){
         board[r][c] = 0;
         return true;
       }
@@ -46,8 +54,12 @@ public class QueenBoard{
 
     public String toString(){
       String res = "";
-      for(int i = 0)
-        for(int j = 0)
+      for(int i = 0){
+        for(int j = 0){
+
+        }
+      }
+
     }
 
     /**
