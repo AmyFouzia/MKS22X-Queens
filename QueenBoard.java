@@ -75,12 +75,19 @@ public class QueenBoard{
 
     public String toString(){
       String res = "";
-      for(int i = 0){
-        for(int j = 0){
-
+      for(int i = 0; i < board.length; i++){
+        for(int j = 0; j < board[i].length; j++){
+          if(board[i][j] == -1){
+            res += "Q";
+          }
+          else{
+            res += "_";
+          }
+          res+= " ";
         }
+        res += "\n"
       }
-
+      return res; //similar to wordSearch
     }
 
     /**
@@ -93,12 +100,20 @@ public class QueenBoard{
 
     }
 
+    public boolean solveHelp(int){
+
+    }
+
     /**
     *return the number of solutions found, and leaves the board filled with only 0's
     *throws IllegalStateException when the board starts with any non-zero value
     */
 
     public int countSolutions(){
+
+    }
+
+    public int countSolutions(int){
 
     }
 
