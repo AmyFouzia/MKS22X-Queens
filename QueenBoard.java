@@ -161,8 +161,9 @@ public class QueenBoard{
       int res = 0;
 
       for(int i = 0; i < board.length; i++){
-        if(){
-
+        if(addQueen(i, c)){
+          res += cShelp(c+1);
+          removeQueen(i, c);
         }
       }
       return res;
