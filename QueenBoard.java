@@ -96,11 +96,10 @@ public class QueenBoard{
     */
 
     public boolean solve(){
-      for (int i = 0; i < board.length; i++){
-        for (int j = 0; j < board[i].length; j++){
-          if (board[i][j] != 0) throw new IllegalStateException();
-        }
+      if(isExcep()){
+        throw new IllegalStateException();
       }
+
       //recursive step
       return solveHelp(0);
     }
@@ -133,10 +132,8 @@ public class QueenBoard{
     */
 
     public int countSolutions(){
-      for (int i = 0; i < board.length; i++){
-        for (int j = 0; j < board[i].length; j++){
-          if (board[i][j] != 0) throw new IllegalStateException();
-        }
+      if(isExcep()){
+        throw new IllegalStateException();
       }
 
       int res = cShelp(0);
@@ -169,6 +166,17 @@ public class QueenBoard{
       return res;
     }
 
+    public boolean isExcep(){
+      for (int r = 0; r < board.length; r++){
+        for (int c = 0; c < board[r].length; c++){
+          if (board[r][c] != 0){
+            return true;
+          }
+        }
+      }
+      return false;
+    }
+
     public static void main(String[] args){
       //testing purposes
       QueenBoard board = new QueenBoard(4);
@@ -182,5 +190,13 @@ public class QueenBoard{
       System.out.println(board);
 
     }
+
+    public void clear(){
+    for (int r = 0; r < board.length; r++){
+      for (int c = 0; c < board[r].length; c++){
+        board[r][c] = 0;
+      }
+    }
+  }
 
 }

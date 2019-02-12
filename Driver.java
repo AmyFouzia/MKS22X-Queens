@@ -1,55 +1,85 @@
 public class Driver{
   public static void main(String[] args) {
-    String x = " solutions found\n";
-    String z = "First solution found:\n\n";
-    QueenBoard a = new QueenBoard(0);
-      System.out.println(a.countSolutions() + x);//1
-      a.solve();
-      if (a.countSolutions() == 0) System.out.println(a);
-      else System.out.println(z + a);
-    QueenBoard b = new QueenBoard(1);
-      System.out.println(b.countSolutions() + x);//1
-      b.solve();
-      System.out.println(z + b);
-    QueenBoard c = new QueenBoard(2);
-      System.out.println(c.countSolutions() + x);//0
-      c.solve();
-      if (c.countSolutions() == 0) System.out.println(c);
-      else System.out.println(z + c);
-    QueenBoard d = new QueenBoard(3);
-      System.out.println(d.countSolutions() + x);//0
-      d.solve();
-      if (d.countSolutions() == 0) System.out.println(d);
-      else System.out.println(z + d);
-    QueenBoard e = new QueenBoard(4);
-      System.out.println(e.countSolutions() + x);//2
-      e.solve();
-      System.out.println(z + e);
-    QueenBoard f = new QueenBoard(5);
-      System.out.println(f.countSolutions() + x);//10
-      f.solve();
-      System.out.println(z + f);
-    QueenBoard g = new QueenBoard(6);
-      System.out.println(g.countSolutions() + x);//4
-      g.solve();
-      System.out.println(z + g);
-    QueenBoard h = new QueenBoard(7);
-      System.out.println(h.countSolutions() + x);//40
-      h.solve();
-      System.out.println(z + h);
-    QueenBoard i = new QueenBoard(8);
-      System.out.println(i.countSolutions() + x);//92
-      i.solve();
-      System.out.println(z + i);
-    QueenBoard j = new QueenBoard(9);
-      System.out.println(j.countSolutions() + x); //352
-      j.solve();
-      System.out.println(z + j);
-    QueenBoard k = new QueenBoard(10);
-      System.out.println(k.countSolutions() + x);//724
-      //System.out.println(k);
-      k.solve();
-      System.out.println(z + k);
+    QueenBoard board1 = new QueenBoard(1);
+    QueenBoard board2 = new QueenBoard(2);
+    QueenBoard board3 = new QueenBoard(3);
+    QueenBoard board4 = new QueenBoard(4);
+    QueenBoard board5 = new QueenBoard(5);
+    QueenBoard board6 = new QueenBoard(6);
+    QueenBoard board7 = new QueenBoard(7);
+    QueenBoard board8 = new QueenBoard(8);
+
+    System.out.println("");
+
+
+    System.out.println("");
+
+    System.out.println(board4);//should print 4x4 board
+
+    System.out.println("");
+
+    board1.solve();
+    System.out.println(board1);
+    System.out.println("");
+
+    board2.solve();
+    System.out.println(board2);
+    System.out.println("");
+
+    board3.solve();
+    System.out.println(board3);
+    System.out.println("");
+
+    board4.solve();
+    System.out.println(board4);
+    System.out.println("");
+
+    board5.solve();
+    System.out.println(board5);
+    System.out.println("");
+
+    board6.solve();
+    System.out.println(board6);
+    System.out.println("");
+
+    board7.solve();
+    System.out.println(board7);
+    System.out.println("");
+
+    board8.solve();
+    System.out.println(board8);
+    System.out.println("");
+
+
+    //testing out count
+    try {
+      System.out.println(board8.countSolutions());
+    }
+    catch (IllegalStateException e){
+      System.out.println("board is not empty");
+    }
+
+    System.out.println("");
+    System.out.println("");
+
+    board1.clear();
+    board2.clear();
+    board3.clear();
+    board4.clear();
+    board5.clear();
+    board6.clear();
+    board7.clear();
+    board8.clear();
+
+    System.out.println(board1.countSolutions());//1
+    System.out.println(board2.countSolutions());//0
+    System.out.println(board3.countSolutions());//0
+    System.out.println(board4.countSolutions());//2
+    System.out.println(board5.countSolutions());//10
+    System.out.println(board6.countSolutions());//4
+    System.out.println(board7.countSolutions());//40
+    System.out.println(board8.countSolutions());//92
+
 
   }
 }
