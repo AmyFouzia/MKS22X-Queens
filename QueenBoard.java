@@ -55,12 +55,6 @@ public class QueenBoard{
         return true;
       }
 
-      return false;
-    }
-
-    private boolean isThreatened(){
-
-    }
 
   //Public Methods:
     /**
@@ -107,12 +101,27 @@ public class QueenBoard{
           if (board[i][j] != 0) throw new IllegalStateException();
         }
       }
-      return true;
+      //recursive step
+      return solveHelp(0, 0)
     }
 
-    public boolean solveHelp(int){
+    public boolean solveHelp(int r, int c){
+      //base case
+      if(c >= board.length){
+        return true;
+      }
 
+      //recursive backtracking
+      while(r < board.length){
+        if(){
+          if(){
+
+          }
+        }
+      }
+      return false;
     }
+
 
     /**
     *return the number of solutions found, and leaves the board filled with only 0's
@@ -120,10 +129,17 @@ public class QueenBoard{
     */
 
     public int countSolutions(){
+      for (int i = 0; i < board.length; i++){
+        for (int j = 0; j < board.length; j++){
+          if (board[i][j] != 0) throw new IllegalStateException();
+        }
+      }
 
+      return cShelp();
     }
 
-    public int countSolutions(int){
+
+    public int cShelp(int c){
 
     }
 
