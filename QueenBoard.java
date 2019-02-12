@@ -18,14 +18,35 @@ public class QueenBoard{
 
       for(int i = 0; i <board.length - c; i++){
         board[r][i+c] ++; //sqs. to the right
-        
+
+        if(){
+
+        }
+
+        if(){
+
+        }
       }
 
       return true;
     }
 
     private boolean removeQueen(int r, int c){
+        if (board[r][c] != -1){
+          return false; //cant rm a queen if there is none
+        }
+
         board[r][c] = 0;
+
+        for(int i =0; i < board.length - c; i++){
+
+          if(){
+
+          }
+          if(){
+
+          }
+        }
         return true;
       }
 
