@@ -120,7 +120,10 @@ public class QueenBoard{
           removeQueen(i, c); //rm and try again
         }
       }
+      // System.out.println(Text.go(1,1));
+      // System.out.println(this);Text.wait(50); //adjust this delay
       return false; //unsolveable
+
     }
 
 
@@ -136,12 +139,33 @@ public class QueenBoard{
         }
       }
 
-      return cShelp();
+      int res = cShelp(0);
+      //clear board
+      for (int r = 0; r < board.length; r++){
+        for (int c = 0; c < board[r].length; c++){
+          board[r][c] = 0;
+        }
+      }
+
+      return res;
     }
 
 
     public int cShelp(int c){
+      //base case
+      if(c >= board.length){
+        return 1;
+      }
 
+      //recursive backtracking
+      int res = 0;
+
+      for(int i = 0; i < board.length; i++){
+        if(){
+
+        }
+      }
+      return res;
     }
 
     public static void main(String[] args){
