@@ -6,6 +6,7 @@ public class QueenBoard{
   //Constructor:
     public QueenBoard(int size){
       board = new int[size][size];
+      //addQueen(0,0);
     }
 
   //Private methods (suggested):
@@ -16,15 +17,16 @@ public class QueenBoard{
 
       board[r][c] = -1; //queen
 
-      for(int i = 0; i <board.length - c; i++){
+      for(int i = 1; i <board.length - c; i++){
         board[r][i+c] ++; //sqs. to the right
 
-        if(){
-
+        //add one for threatened squares
+        if(r-i >= 0){
+          board[r-i][c+i] ++;
         }
 
-        if(){
-
+        if(r+i < board.length){
+          board[r + i][c + i]++;
         }
       }
 
@@ -38,7 +40,7 @@ public class QueenBoard{
 
         board[r][c] = 0;
 
-        for(int i =0; i < board.length - c; i++){
+        for(int i = 0; i < board.length - c; i++){
 
           if(){
 
@@ -97,7 +99,12 @@ public class QueenBoard{
     */
 
     public boolean solve(){
-
+      for (int i = 0; i < board.length; i++){
+        for (int j = 0; j < board.length; j++){
+          if (board[i][j] != 0) throw new IllegalStateException();
+        }
+      }
+      return true;
     }
 
     public boolean solveHelp(int){
@@ -114,6 +121,20 @@ public class QueenBoard{
     }
 
     public int countSolutions(int){
+
+    }
+
+    public static void main(String[] args){
+      //testing purposes
+      QueenBoard board = new QueenBoard(4);
+
+      board.solve();
+
+      board.addQueen(0,0);
+      System.out.println(board);
+
+      board.addQueen(2,0);
+      System.out.println(board);
 
     }
 
