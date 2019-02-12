@@ -6,19 +6,19 @@ public class QueenBoard{
   //Constructor:
     public QueenBoard(int size){
       board = new int[size][size];
-      for(int row = 0; row <= size; row++){
-        for(int col = 0; col <= size; col++){
-          board[row][col] = 0;
-        }
-      }
     }
 
   //Private methods (suggested):
     private boolean addQueen(int r, int c){
-      board[r][c] = 0
+      if (board[r][c] != 0){
+        return false; //only empty spaces
+      }
 
-      for(){
+      board[r][c] = -1; //queen
 
+      for(int i = 0; i <board.length - c; i++){
+        board[r][i+c] ++; //sqs. to the right
+        
       }
 
       return true;
