@@ -84,7 +84,7 @@ public class QueenBoard{
           }
           res+= " ";
         }
-        res += "\n"
+        res += "\n";
       }
       return res; //similar to wordSearch
     }
@@ -102,7 +102,7 @@ public class QueenBoard{
         }
       }
       //recursive step
-      return solveHelp(0)
+      return solveHelp(0);
     }
 
     public boolean solveHelp(int c){
