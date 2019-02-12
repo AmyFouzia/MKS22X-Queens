@@ -102,24 +102,25 @@ public class QueenBoard{
         }
       }
       //recursive step
-      return solveHelp(0, 0)
+      return solveHelp(0)
     }
 
-    public boolean solveHelp(int r, int c){
+    public boolean solveHelp(int c){
       //base case
       if(c >= board.length){
         return true;
       }
 
       //recursive backtracking
-      while(r < board.length){
-        if(){
-          if(){
-
+      for(int i =0; i < board.length; i++){ //for loop works better than the while
+        if(addQueen(i, c)){
+          if(solveHelp(c + 1)){
+            return true; //try next col
           }
+          removeQueen(i, c); //rm and try again
         }
       }
-      return false;
+      return false; //unsolveable
     }
 
 
