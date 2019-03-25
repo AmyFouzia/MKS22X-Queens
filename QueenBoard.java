@@ -17,16 +17,16 @@ public class QueenBoard{
 
       board[r][c] = -1; //queen
 
-      for(int i = 1; i <board.length - c; i++){
-        board[r][i+c] ++; //sqs. to the right
+      for(int i = 1; i < board.length - c; i++){
+        board[r][i+c] += 1; //sqs. to the right
 
         //add one for threatened squares
         if(r-i >= 0){
-          board[r-i][c+i] ++;
+          board[r-i][c+i] += 1;
         }
 
         if(r+i < board.length){
-          board[r + i][c + i]++;
+          board[r + i][c + i]+= 1;
         }
       }
 
@@ -40,16 +40,16 @@ public class QueenBoard{
 
         board[r][c] = 0;
 
-        for(int i = 0; i < board.length - c; i++){
-          board[r][i+c] --; //sqs. to the right
+        for(int i = 1; i < board.length - c; i++){
+          board[r][i+c] -= 1; //sqs. to the right
 
           //same as addqu but subtract 1
           if(r-i >= 0){
-            board[r-i][c+i] --;
+            board[r-i][c+i] -= 1;
           }
 
           if(r+i < board.length){
-            board[r + i][c + i] --;
+            board[r + i][c + i] -= 1;
           }
         }
         return true;
@@ -138,11 +138,7 @@ public class QueenBoard{
 
       int res = cShelp(0);
       //clear board
-      for (int r = 0; r < board.length; r++){
-        for (int c = 0; c < board[r].length; c++){
-          board[r][c] = 0;
-        }
-      }
+      clear();
 
       return res;
     }
